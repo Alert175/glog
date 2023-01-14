@@ -50,7 +50,7 @@ func (gl *GLog) Warn(content interface{}) {
 }
 
 // логирование уровня Error
-func (gl *GLog) Error(content interface{}, err error, notification bool) {
+func (gl *GLog) Error(content interface{}, err error) {
 	infoContent := fmt.Sprintf("%+v %v", content, time.Now().Format(time.RFC3339))
 	fmt.Print(red("[error] "))
 
